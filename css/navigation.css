@@ -3,7 +3,7 @@
   top: 0;
   z-index: 20;
   backdrop-filter: blur(16px);
-  background: rgba(7, 17, 31, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--border);
 }
 
@@ -12,25 +12,31 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 1.1rem 0;
 }
 
 .nav-logo {
-  font-size: 1.08rem;
+  font-size: 1.02rem;
   font-weight: 800;
   letter-spacing: 0.24em;
+  color: var(--text-primary);
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.3rem;
+  gap: 1.35rem;
   color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  padding: 0.3rem 0;
 }
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-  color: var(--text-primary);
+  color: var(--accent);
 }
 
 .nav-toggle {
