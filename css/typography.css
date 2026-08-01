@@ -1,0 +1,37 @@
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: radial-gradient(circle at top left, rgba(125, 211, 252, 0.18), transparent 28%), var(--bg);
+  color: var(--text-primary);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+p {
+  margin-bottom: 0;
+}
