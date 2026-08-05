@@ -4,8 +4,7 @@
 }
 
 .info-card,
-.feature-panel,
-.cta-banner {
+.feature-panel {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-card);
@@ -50,15 +49,6 @@
 .feature-item:last-child {
   border-bottom: 0;
   padding-bottom: 0;
-}
-
-.cta-banner {
-  border-radius: var(--radius-lg);
-  padding: 1.7rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
 }
 
 .site-footer {

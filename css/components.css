@@ -76,8 +76,7 @@
 
 .hero-copy h1,
 .section-heading h2,
-.split-layout h2,
-.cta-banner h2 {
+.split-layout h2{
   margin: 0 0 1rem;
   line-height: 1.1;
   font-size: clamp(2rem, 4vw, 3.2rem);
@@ -93,10 +92,8 @@
 
 .hero-text,
 .section-heading p,
-.split-layout p,
 .info-card p,
-.feature-item p,
-.hero-card p {
+.hero-card p{
   color: var(--text-secondary);
 }
 
@@ -124,8 +121,7 @@
 
 .hero-card,
 .info-card,
-.feature-panel,
-.cta-banner {
+.feature-panel {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -208,15 +204,6 @@
 .feature-item:last-child {
   border-bottom: 0;
   padding-bottom: 0;
-}
-
-.cta-banner {
-  border-radius: var(--radius-lg);
-  padding: 1.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
 }
 
 .site-footer {

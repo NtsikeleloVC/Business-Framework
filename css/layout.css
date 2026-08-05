@@ -310,7 +310,6 @@ position: relative;
 
 }
 
-.cta-banner,
 .site-footer {
   margin-top: 1rem;
 }
@@ -324,30 +323,6 @@ position: relative;
   border-top: 1px solid var(--border);
 }
 
-@keyframes auroraMove {
-
-    0% {
-
-        transform:
-            translate(-8%, -5%) scale(1);
-
-    }
-
-    50% {
-
-        transform:
-            translate(8%, 6%) scale(1.15);
-
-    }
-
-    100% {
-
-        transform:
-            translate(-6%, 8%) scale(1);
-
-    }
-
-}
 
 @keyframes gradientShift {
 
@@ -392,3 +367,581 @@ position: relative;
     }
 
 }
+
+/*==================================================
+WHY KLEZMER
+==================================================*/
+
+.why-klezmer {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 8rem 0;
+
+    background:
+
+        radial-gradient(circle at 15% 20%,
+            rgba(0, 195, 255, .22),
+            transparent 35%),
+
+        radial-gradient(circle at 90% 65%,
+            rgba(18, 101, 239, .25),
+            transparent 40%),
+
+        radial-gradient(circle at 55% 110%,
+            rgba(0, 90, 255, .16),
+            transparent 45%),
+
+        linear-gradient(135deg,
+            #020817,
+            #071B3B 45%,
+            #08101F);
+
+}
+
+.why-klezmer::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -25%;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(0, 195, 255, .15),
+            transparent 60%);
+
+    filter: blur(120px);
+
+    animation:
+        auroraMove 14s linear infinite;
+
+}
+@keyframes auroraMove {
+
+    0% {
+
+        transform:
+            translate(-8%, 0%) scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate(8%, 6%) scale(1.15);
+
+    }
+
+    100% {
+
+        transform:
+            translate(-8%, 0%) scale(1);
+
+    }
+
+}
+
+.why-klezmer::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        radial-gradient(rgba(255, 255, 255, .45) 1px,
+            transparent 1px);
+
+    background-size:
+
+        70px 70px;
+
+    opacity: .15;
+
+    animation:
+
+        particles 30s linear infinite;
+
+}
+
+@keyframes particles {
+
+    from {
+
+        transform:
+            translateY(0);
+
+    }
+
+    to {
+
+        transform:
+            translateY(-70px);
+
+    }
+
+}
+
+/*==================================================
+WHY KLEZMER PANEL
+==================================================*/
+
+.why-panel {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.why-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+
+    height: 620px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(18, 101, 239, .35);
+
+    box-shadow:
+        0 0 80px rgba(18, 101, 239, .30);
+
+    animation:
+        rotateRing 25s linear infinite;
+
+}
+
+.why-panel::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(0, 210, 255, .25);
+
+    animation:
+        rotateRingReverse 18s linear infinite;
+
+}
+
+.why-klezmer h2 {
+    color: #ffffff;
+}
+
+.why-klezmer p {
+    color: rgba(255, 255, 255, .75);
+}
+
+.why-klezmer .eyebrow {
+    color: #4FC3FF;
+}
+
+@keyframes rotateRing {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+@keyframes rotateRingReverse {
+
+    from {
+
+        transform: rotate(360deg);
+
+    }
+
+    to {
+
+        transform: rotate(0deg);
+
+    }
+
+}
+
+.why-card {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    max-width: 620px;
+
+    padding: 2.8rem;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(10, 24, 54, .78),
+            rgba(6, 18, 40, .65));
+
+    backdrop-filter: blur(22px);
+
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(79, 195, 255, .18);
+
+    box-shadow:
+
+        0 40px 90px rgba(0, 0, 0, .45),
+
+        0 0 60px rgba(18, 101, 239, .28),
+
+        inset 0 1px 0 rgba(255, 255, 255, .08);
+
+}
+
+.why-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: 34px;
+
+    background:
+
+        linear-gradient(135deg,
+            rgba(79, 195, 255, .18),
+            transparent 45%,
+            rgba(18, 101, 239, .18));
+
+    filter: blur(10px);
+
+    z-index: -1;
+
+}
+
+.feature-item {
+
+    padding: 2rem 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.feature-item:last-child {
+
+    border-bottom: none;
+
+}
+
+.feature-item strong {
+
+    display: block;
+
+    margin-bottom: .6rem;
+
+    color: #fff;
+
+    font-size: 1.35rem;
+
+    font-weight: 600;
+
+}
+
+.feature-item p {
+
+    color: #fff;
+
+}
+
+.why-content {
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+.why-content h2 {
+
+    font-size: clamp(3rem, 5vw, 4.8rem);
+
+    line-height: 1.05;
+
+    margin: 1rem 0 2rem;
+
+}
+
+.why-content p {
+
+    max-width: 560px;
+    color: #fff;
+
+}
+
+.why-klezmer .why-card p {
+    color: rgba(255, 255, 255, .72);
+}
+
+
+
+/* .why-klezmer .feature-item p {
+    color: rgba(255, 255, 255, .82);
+} */
+
+/*==================================================
+CTA BANNER
+==================================================*/
+
+.cta-banner {
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin: 0 auto;
+
+    max-width: 1200px;
+
+    min-height: 200px;
+
+    padding: 1rem;
+
+    border-radius: 32px;
+
+    background: linear-gradient(135deg,
+            #071B3B,
+            #0F4AB8,
+            #2F80ED,
+            #4F46E5,
+            #071B3B);
+
+    background-size: 400% 400%;
+
+    animation: gradientShift 20s ease infinite;
+
+}
+
+.cta-banner>div {
+
+    max-width: 700px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.cta-banner::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    top: -150px;
+
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 255, 255, .18);
+
+    filter: blur(120px);
+
+    animation: floatGlow 14s ease-in-out infinite;
+
+}
+
+.cta-banner::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .05) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(255, 255, 255, .05) 1px,
+            transparent 1px);
+
+    background-size: 34px 34px;
+
+    opacity: .35;
+
+}
+
+.cta-banner>* {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.cta-banner h2 {
+
+    font-size: clamp(2.2rem, 3vw, 3.4rem);
+
+    line-height: 1.1;
+
+    color: #fff;
+
+    margin-top: 1rem;
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.site-header {
+
+    position: fixed;
+
+    top: 18px;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+}
+
+.header-wrapper {
+
+    position: relative;
+
+    width: min(1360px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    border-radius: 26px;
+
+    background: rgba(255, 255, 255, .72);
+
+    backdrop-filter: blur(22px);
+
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(255, 255, 255, .65);
+
+    box-shadow:
+
+        0 15px 45px rgba(15, 23, 42, .10),
+
+        0 0 30px rgba(18, 101, 239, .08);
+
+}
+
+.navbar {
+
+    width: 100%;
+
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 3rem;
+
+}
+
+.header-wrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: 28px;
+
+    background:
+
+        linear-gradient(90deg,
+            transparent,
+            rgba(18, 101, 239, .18),
+            transparent);
+
+    filter: blur(12px);
+
+    z-index: -1;
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+}
+.logo-image {
+
+    height: 150px;
+
+    width: auto;
+
+    display: block;
+
+    transition: .35s ease;
+
+}
+
+.logo:hover .logo-image {
+
+    transform: scale(1.04);
+
+}
+
