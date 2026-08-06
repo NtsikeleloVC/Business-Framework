@@ -971,26 +971,28 @@ CTA BANNER
 .cta-banner {
 
     position: relative;
+    
+        overflow: hidden;
+    
+        display: grid;
+    
+        grid-template-columns: 1fr auto;
+    
+        align-items: center;
+    
+        gap: 80px;
+    
+        padding: 70px;
+    
+        border-radius: 36px;
 
-    overflow: hidden;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 1rem;
-
-    margin: 0 auto;
-
-    max-width: 1200px;
-
-    min-height: 200px;
-
-    padding: 1rem;
-
-    border-radius: 32px;
+        max-width: 1320px;
+        
+            margin: 0 auto;
+        
+            width: 100%;
+        
+            border-radius: 36px;
 
     background: linear-gradient(135deg,
             #071B3B,
@@ -999,9 +1001,9 @@ CTA BANNER
             #4F46E5,
             #071B3B);
 
-    background-size: 400% 400%;
-
-    animation: gradientShift 20s ease infinite;
+    box-shadow:
+    
+            0 40px 90px rgba(0, 0, 0, .28);
 
 }
 
@@ -1018,47 +1020,54 @@ CTA BANNER
 .cta-banner::before {
 
     content: "";
+    
+        position: absolute;
+    
+        right: -140px;
+    
+        top: -100px;
+    
+        width: 420px;
+    
+        height: 420px;
+    
+        border-radius: 50%;
 
-    position: absolute;
+    background:
+    
+            radial-gradient(circle,
+                rgba(76, 102, 255, .45),
+                transparent 70%);
 
-    width: 450px;
+    filter: blur(60px);
 
-    height: 450px;
-
-    top: -150px;
-
-    right: -100px;
-
-    border-radius: 50%;
-
-    background: rgba(0, 255, 255, .18);
-
-    filter: blur(120px);
-
-    animation: floatGlow 14s ease-in-out infinite;
+    
 
 }
 
 .cta-banner::after {
 
     content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-
-        linear-gradient(rgba(255, 255, 255, .05) 1px,
-            transparent 1px),
-
-        linear-gradient(90deg,
-            rgba(255, 255, 255, .05) 1px,
-            transparent 1px);
-
-    background-size: 34px 34px;
-
-    opacity: .35;
+    
+        position: absolute;
+    
+        left: -180px;
+    
+        bottom: -180px;
+    
+        width: 700px;
+    
+        height: 280px;
+    
+        background:
+    
+            radial-gradient(ellipse,
+    
+                rgba(45, 225, 255, .25),
+    
+                transparent 70%);
+    
+        filter: blur(50px);
 
 }
 
@@ -1079,6 +1088,349 @@ CTA BANNER
     color: #fff;
 
     margin-top: 1rem;
+
+}
+
+.cta-description {
+
+    margin-top: 28px;
+
+    max-width: 620px;
+
+    color: rgba(255, 255, 255, .78);
+
+    font-size: 1.1rem;
+
+    line-height: 1.9;
+
+}
+
+.cta-email {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 22px 34px;
+
+    border-radius: 100px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 1.1rem;
+
+    background:
+
+        linear-gradient(90deg,
+            #1DAFFF,
+            #4E7FFF,
+            #8A5CFF);
+
+    box-shadow:
+
+        0 15px 35px rgba(38, 118, 255, .35);
+
+    transition: .35s;
+
+}
+
+.cta-email:hover {
+
+    transform:
+
+        translateY(-5px) scale(1.02);
+
+}
+
+.cta-email strong {
+
+    transition: .35s;
+
+}
+
+.cta-email:hover strong {
+
+    transform: translateX(8px);
+
+}
+
+.cta-meta {
+
+    display: flex;
+
+    gap: 45px;
+
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.meta-item {
+
+    display: flex;
+
+    gap: 14px;
+
+    align-items: center;
+
+}
+
+.meta-icon {
+
+    width: 56px;
+
+    height: 56px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+
+        rgba(255, 255, 255, .05);
+
+    border:
+
+        1px solid rgba(59, 214, 255, .30);
+
+    color: #35D9FF;
+
+    font-size: 1.4rem;
+
+}
+
+.meta-item strong {
+
+    display: block;
+
+    color: white;
+
+}
+
+.cta-banner .eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 18px;
+
+    border-radius: 100px;
+
+    background: rgba(255, 255, 255, .06);
+
+    border: 1px solid rgba(79, 195, 255, .25);
+
+    color: #4FC3FF;
+
+    font-size: .78rem;
+
+    font-weight: 700;
+
+    letter-spacing: .22em;
+
+    text-transform: uppercase;
+
+    backdrop-filter: blur(12px);
+
+}
+
+.eyebrow-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #35D9FF;
+
+    box-shadow:
+
+        0 0 14px rgba(53, 217, 255, .7);
+
+    animation: pulseDot 2s ease-in-out infinite;
+
+}
+
+@keyframes pulseDot {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        transform: scale(1.5);
+
+        opacity: .6;
+
+    }
+
+}
+
+.cta-button {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px 34px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    font-weight: 700;
+
+    font-size: 1.05rem;
+
+    background: linear-gradient(90deg,
+            #22C8FF,
+            #2F80ED,
+            #6D5BFF);
+
+    overflow: hidden;
+
+    box-shadow:
+
+        0 18px 45px rgba(47, 128, 237, .35),
+
+        inset 0 1px 1px rgba(255, 255, 255, .20);
+
+    transition: .4s ease;
+
+}
+
+.cta-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(115deg,
+
+            transparent 20%,
+
+            rgba(255, 255, 255, .28) 50%,
+
+            transparent 80%);
+
+    transform: translateX(-140%);
+
+}
+
+.cta-button:hover::before {
+
+    animation: buttonSweep .8s ease;
+
+}
+
+.cta-button:hover {
+
+    transform:
+
+        translateY(-5px) scale(1.03);
+
+    box-shadow:
+
+        0 28px 60px rgba(47, 128, 237, .45),
+
+        0 0 40px rgba(98, 102, 255, .35);
+
+}
+
+.cta-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, .12);
+
+    border: 1px solid rgba(255, 255, 255, .18);
+
+    backdrop-filter: blur(10px);
+
+}
+
+.cta-icon svg {
+
+    width: 22px;
+
+    height: 22px;
+
+}
+
+.cta-arrow {
+
+    transition: .35s ease;
+
+    font-size: 1.2rem;
+
+}
+
+.cta-button:hover .cta-arrow {
+
+    transform: translateX(8px);
+
+}
+
+.cta-text {
+
+    white-space: nowrap;
+
+}
+
+.cta-button::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    pointer-events: none;
 
 }
 
