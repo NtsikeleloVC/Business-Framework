@@ -18,9 +18,7 @@
 
 .hero-text,
 .section-heading p,
-.split-layout p,
 .info-card p,
-.feature-item p,
 .hero-card p,
 .stat-card p {
   color: var(--text-secondary);
